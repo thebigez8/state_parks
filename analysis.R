@@ -13,3 +13,4 @@ for(i in parks)
   }
 }
 
+three_opt(0:67, dat.mat)
