@@ -3,19 +3,26 @@ library(xml2)
 library(rvest)
 source("API_KEY.R")
 
-sra <- c("Big Bog", "La Salle Lake", "Minnesota Valley", "Red River")
+sra <- c("Big Bog", "La Salle Lake", "Minnesota Valley", "Red River", "Garden Island",
+         "Cuyuna Country", "Iron Range Off-Highway Vehicle", "Greenleaf Lake")
+non.hiking.club <- c("Cuyuna Country", "Garden Island", "Greenleaf Lake",
+                     "Hill Annex Mine", "Iron Range Off-Highway Vehicle", "John A. Latsch")
+
 parks <- "parks.tsv" %>%
   read_tsv(col_names = TRUE, col_types = cols()) %>%
   mutate(
+    Hiking.Club = !(Park %in% non.hiking.club),
     Park = paste(Park, "State", if_else(Park %in% sra, "Recreation Area", "Park"), "MN")
   )
 
 pairs <- parks$Park %>%
+  setdiff("Garden Island State Recreation Area MN") %>%
   combn(2) %>%
   t() %>%
   as.data.frame() %>%
   set_names(paste0("Park", 1:2)) %>%
   as_tibble() %>%
+  filter(!(Park1 %in% parks$Park[parks$Hiking.Club]) | !(Park2 %in% parks$Park[parks$Hiking.Club])) %>%
   mutate(
     results = map(Park1, ~ list())
   )
@@ -30,7 +37,7 @@ get_park <- function(p1, p2)
   read_xml(url)
 }
 
-for(i in 1001:nrow(pairs))
+for(i in 1:nrow(pairs))
 {
   pairs$results[[i]] <- get_park(pairs$Park1[i], pairs$Park2[i])
   if(i %% 10 == 0) print(i)
@@ -58,6 +65,7 @@ anyNA(pairs$origin)
 anyNA(pairs$destination)
 table(pairs$status)
 pairs$results <- NULL
-write.csv(pairs, "paired_distances.csv", row.names = FALSE)
+write.table(pairs, "paired_distances.csv", sep = ",", row.names = FALSE, append = TRUE,
+            col.names = FALSE)
 
 
