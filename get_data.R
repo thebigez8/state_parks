@@ -69,3 +69,24 @@ write.table(pairs, "paired_distances.csv", sep = ",", row.names = FALSE, append 
             col.names = FALSE)
 
 
+get_lat_long <- function(p)
+{
+  api <- "https://maps.googleapis.com/maps/api/geocode/xml?"
+  url <- paste0(api, "address=", to_park(p), "&key=", API_KEY)
+  read_xml(url)
+}
+
+parks$latlong <- map(parks$Park, get_lat_long)
+parks$address <- map_chr(parks$latlong, ~ html_text(html_node(.x, "formatted_address")))
+parks$lat <- map_chr(parks$latlong, ~ html_text(html_node(.x, "location lat")))
+parks$long <- map_chr(parks$latlong, ~ html_text(html_node(.x, "location lng")))
+parks$place_id <- map_chr(parks$latlong, ~ html_text(html_node(.x, "place_id")))
+parks$status <- map_chr(parks$latlong, ~ html_text(html_node(.x, "status")))
+
+anyNA(parks$address)
+anyNA(parks$lat)
+anyNA(parks$long)
+anyNA(parks$place_id)
+table(parks$status)
+parks$latlong <- NULL
+write.table(parks, "parks.tsv", sep = "\t", row.names = FALSE, col.names = TRUE)
