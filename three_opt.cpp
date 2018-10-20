@@ -71,3 +71,14 @@ IntegerVector three_opt(IntegerVector tour, NumericMatrix distances, int maxSwap
 
   return out;
 }
+
+// [[Rcpp::export]]
+double tour_dist(IntegerVector tour, NumericMatrix distances) {
+  double out = distances(tour[0], tour[tour.size() - 1]);
+  for(int i = 0; i < tour.size() - 1; i++)
+  {
+    out += distances(tour[i], tour[i+1]);
+  }
+  return out;
+}
+
