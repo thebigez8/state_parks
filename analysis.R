@@ -25,13 +25,18 @@ tour.dist <- function(distances, tour) tour_dist(tour - 1L, distances = distance
 park.info <- read_tsv("parks.tsv", col_names = TRUE, col_types = cols())
 mn <- filter(map_data("state"), region == "minnesota")
 
-generate_tour <- function(hiking.club = FALSE)
+generate_tour <- function(what = c("all", "sp.only", "hc.only"))
 {
+  what <- match.arg(what)
   stopifnot(all(names(park.info$Park) == colnames(dat.mat)))
-  if(hiking.club)
+  if(what == "hc.only")
   {
     hc <- colnames(dat.mat) %in% park.info$Park[park.info$Hiking.Club]
     dat.mat.tmp <- dat.mat[hc, hc]
+  } else if(what == "sp.only")
+  {
+    sp <- grepl("State Park MN$", colnames(dat.mat))
+    dat.mat.tmp <- dat.mat[sp, sp]
   } else dat.mat.tmp <- dat.mat
 
   N <- ncol(dat.mat.tmp)
@@ -56,5 +61,6 @@ generate_tour <- function(hiking.club = FALSE)
   tour
 }
 
-generate_tour(TRUE)
+out <- generate_tour("all")
 
+cat(paste0(colnames(dat.mat)[out$tours[[1]][c(1:73, 1)]], collapse = "\n"), file = "optimal_map.csv")
