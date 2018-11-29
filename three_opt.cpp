@@ -3,20 +3,20 @@ using namespace Rcpp;
 // [[Rcpp::export]]
 IntegerVector three_opt(IntegerVector tour, NumericMatrix distances, int maxSwaps, int maxLoops) {
   IntegerVector out = clone(tour);
-  int ncol = distances.ncol(), minidx = 0, n = 0, swaps = 0;
+  int ntour = tour.size(), minidx = 0, n = 0, swaps = 0;
   bool found;
   do
   {
     found = false;
     if(n % 10 == 0) Rcpp::checkUserInterrupt();
-    for(int i = 0; i < ncol; i++)
+    for(int i = 0; i < ntour; i++)
     {
-      for(int j = i + 2; j < ncol; j++)
+      for(int j = i + 2; j < ntour; j++)
       {
-        for(int k = j + 2; k < ncol - (i == 0) && swaps < maxSwaps; k++)
+        for(int k = j + 2; k < ntour - (i == 0) && swaps < maxSwaps; k++)
         {
           int i2 = i + 1, j2 = j + 1, k2 = k + 1;
-          k2 = k2 % ncol;
+          k2 = k2 % ntour;
           int x = out[i], x2 = out[i2], y = out[j], y2 = out[j2], z = out[k], z2 = out[k2];
           NumericVector dists(8);
           dists[0] = distances(x, x2) + distances(y, y2) + distances(z, z2);
@@ -60,7 +60,7 @@ IntegerVector three_opt(IntegerVector tour, NumericMatrix distances, int maxSwap
             if(minidx == 4 || minidx == 5 || minidx == 6 || minidx == 7)
             {
               // swap z2 and x
-              for(int m = 0; (k2 < i && k2 + m <= i) || (k2 > i && k2 + m - ncol <= i); m++) out[(k2 + m) % ncol] = tmp[(i + ncol - m) % ncol];
+              for(int m = 0; (k2 < i && k2 + m <= i) || (k2 > i && k2 + m - ntour <= i); m++) out[(k2 + m) % ntour] = tmp[(i + ntour - m) % ntour];
             }
           }
 

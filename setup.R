@@ -17,7 +17,10 @@ stopifnot(isSymmetric(dat.mat))
 Rcpp::sourceCpp("three_opt.cpp")
 three.opt <- function(distances, tour = 1:ncol(distances), max.swaps = 20000, max.loops = 100)
 {
-  stopifnot(all(length(tour) == dim(distances)))
+  stopifnot(all(length(tour) <= dim(distances)))
+  stopifnot(all(max(tour) <= dim(distances)))
+  stopifnot(nrow(distances) == ncol(distances))
+  stopifnot(length(tour) >= 6)
   three_opt(tour - 1L, distances, max.swaps, max.loops) + 1L
 }
 tour.dist <- function(distances, tour) tour_dist(tour - 1L, distances = distances)
