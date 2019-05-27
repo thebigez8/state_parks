@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+API_KEY.R
+MN_state_parks_route_*
+*.html
