@@ -1,5 +1,5 @@
 library(tidyverse)
-dat <- read.csv("paired_distances.csv", stringsAsFactors = FALSE)
+dat <- read.csv("data/paired_distances.csv", stringsAsFactors = FALSE)
 parks <- sort(unique(c(dat$Park1, dat$Park2)))
 dat.mat <- matrix(0, nrow = 73, ncol = 73, dimnames = list(parks, parks))
 for(i in parks)
@@ -14,7 +14,7 @@ for(i in parks)
 }
 
 stopifnot(isSymmetric(dat.mat))
-Rcpp::sourceCpp("three_opt.cpp")
+Rcpp::sourceCpp("src/three_opt.cpp")
 three.opt <- function(distances, tour = 1:ncol(distances), max.swaps = 20000, max.loops = 100)
 {
   stopifnot(all(length(tour) <= dim(distances)))
@@ -40,7 +40,7 @@ tours.equal <- function(tour1, tour2)
   grepl(tour1, tour2) || grepl(tour1, tour2.rev)
 }
 
-parkinfo <- "parks.tsv" %>%
+parkinfo <- "data/parks.tsv" %>%
   read_tsv(col_names = TRUE, col_types = cols()) %>%
   arrange(Park)
 park.info <- filter(parkinfo, !grepl("^Garden Island", Park))

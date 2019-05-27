@@ -1,4 +1,4 @@
-source("setup.R")
+source("R/setup.R")
 
 generate_tour <- function(what = c("all", "sp.only", "hc.only"))
 {
@@ -27,4 +27,4 @@ generate_tour <- function(what = c("all", "sp.only", "hc.only"))
 out <- generate_tour("all")
 
 cat(paste0(colnames(dat.mat)[out$tours[[1]][c(1:73, 1)]], collapse = "\n"),
-    "\n", sep = "", file = "optimal_map.csv")
+    "\n", sep = "", file = "data/optimal_map.csv")

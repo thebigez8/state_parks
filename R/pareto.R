@@ -1,4 +1,4 @@
-source("setup.R")
+source("R/setup.R")
 
 Mate <- function(tour1, tour2)
 {
