@@ -1,14 +1,14 @@
 library(tidyverse)
 library(xml2)
 library(rvest)
-source("API_KEY.R")
+source("R/API_KEY.R")
 
 sra <- c("Big Bog", "La Salle Lake", "Minnesota Valley", "Red River", "Garden Island",
          "Cuyuna Country", "Iron Range Off-Highway Vehicle", "Greenleaf Lake")
 non.hiking.club <- c("Cuyuna Country", "Garden Island", "Greenleaf Lake",
                      "Hill Annex Mine", "Iron Range Off-Highway Vehicle", "John A. Latsch")
 
-parks <- "parks.tsv" %>%
+parks <- "data/parks.tsv" %>%
   read_tsv(col_names = TRUE, col_types = cols()) %>%
   mutate(
     Hiking.Club = !(Park %in% non.hiking.club),
@@ -65,7 +65,7 @@ anyNA(pairs$origin)
 anyNA(pairs$destination)
 table(pairs$status)
 pairs$results <- NULL
-write.table(pairs, "rawdata/paired_distances.csv", sep = ",", row.names = FALSE, append = TRUE,
+write.table(pairs, "data/paired_distances.csv", sep = ",", row.names = FALSE, append = TRUE,
             col.names = FALSE)
 
 
@@ -89,4 +89,17 @@ anyNA(parks$long)
 anyNA(parks$place_id)
 table(parks$status)
 parks$latlong <- NULL
-write.table(parks, "parks.tsv", sep = "\t", row.names = FALSE, col.names = TRUE)
+write.table(parks, "data/parks.tsv", sep = "\t", row.names = FALSE, col.names = TRUE)
+
+if(FALSE)
+{
+  parks <- "data/parks.tsv" %>%
+    read_tsv(col_types = cols()) %>%
+    full_join(read_csv("data/state_parks.csv", col_types = cols()), by = "Park")
+  write.table(parks, "data/parks.tsv", sep = "\t", row.names = FALSE, col.names = TRUE, na = "")
+  file.remove("data/state_parks.csv")
+}
+
+
+
+
