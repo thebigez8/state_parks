@@ -24,6 +24,40 @@ three.opt <- function(distances, tour = 1:ncol(distances), max.swaps = 20000, ma
   three_opt(tour - 1L, distances, max.swaps, max.loops) + 1L
 }
 tour.dist <- function(distances, tour) tour_dist(tour - 1L, distances = distances)
+brute.force <- function(distances, tour)
+{
+  stopifnot(all(max(tour) <= dim(distances)))
+  stopifnot(nrow(distances) == ncol(distances))
+  stopifnot(length(tour) <= 10 && length(tour) >= 2)
+  brute_force(tour - 1L, distances = distances) + 1L
+}
+tours.equal <- function(tour1, tour2)
+{
+  if(!setequal(tour1, tour2)) return(FALSE)
+  tour1 <- paste0(tour1, collapse = ',')
+  tour2.rev <- paste0(rev(c(tour2, tour2)), collapse = ',')
+  tour2 <- paste0(c(tour2, tour2), collapse = ',')
+  grepl(tour1, tour2) || grepl(tour1, tour2.rev)
+}
 
-park.info <- read_tsv("parks.tsv", col_names = TRUE, col_types = cols())
+parkinfo <- "parks.tsv" %>%
+  read_tsv(col_names = TRUE, col_types = cols()) %>%
+  arrange(Park)
+park.info <- filter(parkinfo, !grepl("^Garden Island", Park))
+
 mn <- filter(map_data("state"), region == "minnesota")
+
+plot_tour <- function(tour)
+{
+  tour.info <- park.info[tour[c(1:length(tour), 1)], ]
+
+  p <- ggplot(mn, aes(x = long, y = lat)) +
+    geom_polygon(fill = NA, color = "black") +
+    geom_path(data = tour.info, color = "red") +
+    geom_point(data = parkinfo, aes(color = Hiking.Club)) +
+    scale_color_manual(values = c("red", "black")) +
+    coord_equal() +
+    theme_classic()
+  plot(p)
+  invisible(p)
+}

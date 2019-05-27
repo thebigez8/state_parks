@@ -82,3 +82,26 @@ double tour_dist(IntegerVector tour, NumericMatrix distances) {
   return out;
 }
 
+// [[Rcpp::export]]
+IntegerVector brute_force(IntegerVector tour, NumericMatrix distances)
+{
+  IntegerVector x = clone(tour);
+  std::sort(x.begin(), x.end());
+  IntegerVector best = clone(x);
+  double dist = tour_dist(best, distances);
+  int n = 0;
+
+  while(std::next_permutation(x.begin(), x.end()))
+  {
+    if(++n % 10000 == 0) Rcpp::checkUserInterrupt();
+
+    double tmp = tour_dist(x, distances);
+    if(tmp < dist)
+    {
+      dist = tmp;
+      best = clone(x);
+    }
+  }
+
+  return best;
+}
