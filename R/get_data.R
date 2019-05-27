@@ -65,7 +65,7 @@ anyNA(pairs$origin)
 anyNA(pairs$destination)
 table(pairs$status)
 pairs$results <- NULL
-write.table(pairs, "paired_distances.csv", sep = ",", row.names = FALSE, append = TRUE,
+write.table(pairs, "rawdata/paired_distances.csv", sep = ",", row.names = FALSE, append = TRUE,
             col.names = FALSE)
 
 
