@@ -24,7 +24,7 @@ Garden Island State Recreation Area MN|FALSE|Garden Island State Recreation Area
 George H. Crosby-Manitou State Park MN|TRUE|George Crosby Manitou State Park, 7616 Co Hwy 7, Finland, MN 55603, USA|47.4794219|-91.1229335|ChIJ58cJiLYdplIRpRnaQm7BBvk|OK||||||||||||||
 Glacial Lakes State Park MN|TRUE|Glacial Lakes State Park, 25022 Co Rd 41, Starbuck, MN 56381, USA|45.541199|-95.531334|ChIJJXT5M6ZgylIRUt6t4SmNQ3A|OK||||||||||||||
 Glendalough State Park MN|TRUE|Glendalough State Park, 25287 Whitetail Ln, Battle Lake, MN 56515, USA|46.314157|-95.67866|ChIJBfW_MTDryVIRPfZ9ig9FK4E|OK||||||||||||||
-Gooseberry Falls State Park MN|TRUE|Gooseberry Falls State Park, 3206 MN-61, Two Harbors, MN 55616, USA|47.1456218|-91.4653691|ChIJcUOH6gpIr1IRRhR90ucVTZo|OK||||||||||||||
+Gooseberry Falls State Park MN|TRUE|Gooseberry Falls State Park, 3206 MN-61, Two Harbors, MN 55616, USA|47.1456218|-91.4653691|ChIJcUOH6gpIr1IRRhR90ucVTZo|OK|spk00172|2019-09-02|2.2|20|Y|5|5|busy, Lake Superior views|1|1|1|0|1|1
 Grand Portage State Park MN|TRUE|Grand Portage State Park, 9393 MN-61, Grand Portage, MN 55605|48.0002547|-89.5936685|ChIJE5vQyIdeWE0RbSbUzV3psTk|OK||||||||||||||
 Great River Bluffs State Park MN|TRUE|Great River Bluffs State Park, 43605 Kipp Dr, Winona, MN 55987, USA|43.939463|-91.408548|ChIJC3h6Uy5F-YcRhh_SQx0uypI|OK|spk00244||2.5|6.5|Y|3.5|4|views|0|1|1|1|1|0
 Greenleaf Lake State Recreation Area MN|FALSE|Greenleaf Lake State Recreation Area, Ellsworth Township, MN 55324, USA|45.015833|-94.466667|ChIJaRIBnBoptVIR__Uq39gBVMM|OK||||||||||||||
@@ -33,7 +33,7 @@ Hill Annex Mine State Park MN|FALSE|Hill Annex Mine State Park, 880 Gary St, Cal
 Interstate State Park MN|TRUE|Interstate State Park, 307 Milltown Ct., Taylors Falls, MN 55084, United States|45.3947267|-92.6677792|ChIJNf75H26QslIRxj6rzx3gtFU|OK||||||||||||||
 Iron Range Off-Highway Vehicle State Recreation Area MN|FALSE|Iron Range Off-Highway Vehicle State Recreation Area, 7196 Pettit Rd, Gilbert, MN 55741, USA|47.4825157|-92.4434361|ChIJW1ovqjlZpVIR6SuWuhKs89s|OK||||||||||||||
 Itasca State Park MN|TRUE|Itasca State Park, 36750 Main Park Drive, Park Rapids, MN 56470, USA|47.194445|-95.165253|ChIJxeWD1JHyt1IRmp6tqI7eASE|OK||||||||||||||
-Jay Cooke State Park MN|TRUE|Jay Cooke State Park, 780 MN-210, Carlton, MN 55718, USA|46.6475355|-92.345346|ChIJ_Yd-rEIwrlIRRcla7RTUst8|OK||||||||||||||
+Jay Cooke State Park MN|TRUE|Jay Cooke State Park, 780 MN-210, Carlton, MN 55718, USA|46.6475355|-92.345346|ChIJ_Yd-rEIwrlIRRcla7RTUst8|OK|spk00187|2019-09-03|3.5|50|Y|4.5|5|river|0|1|1|0|1|1
 John A. Latsch State Park MN|FALSE|John A. Latsch State Park, US-61, Minnesota City, MN 55959, USA|44.171901|-91.839126|ChIJmRZeu0-n-YcRm1un5f0_sic|OK|spk00177|2018-09-09|0|0.5||3.5|3.5|steps|0|1|1|0|1|0
 Judge C.R. Magney State Park MN|TRUE|Judge C.R. Magney State Park, 4051 MN-61, Grand Marais, MN 55604, USA|47.8180794|-90.0531098|ChIJeY404DrHp1IRZ6qvlk0syC8|OK||||||||||||||
 Kilen Woods State Park MN|TRUE|Kilen Woods State Park, 50200 860th St, Lakefield, MN 56150, USA|43.7290962|-95.0666352|ChIJ6QfYBKhNi4cRMQSY90dxBpY|OK|spk00196|2019-07-15|2|5||3.5|3.5|hilly; cool prairie|0|1|1|1|1|0
@@ -67,7 +67,7 @@ Sibley State Park MN|TRUE|Sibley State Park, 800 Sibley Park Rd NE, New London, 
 Split Rock Creek State Park MN|TRUE|Split Rock Creek State Park, 336 50th Ave, Jasper, MN 56144, USA|43.895911|-96.3668441|ChIJm0lsvvTgi4cRxFRm4iA4S4A|OK||||||||||||||
 Split Rock Lighthouse State Park MN|TRUE|Split Rock Lighthouse State Park, 3755 Split Rock Lighthouse Road, Two Harbors, MN 55616, USA|47.1963898|-91.3912157|ChIJvcX13VhJr1IRdrXFakaY1aI|OK||||||||||||||
 Temperance River State Park MN|TRUE|Temperance River State Park, 7620 West Highway 61, Schroeder, MN 55613, United States|47.555824|-90.871819|ChIJtw75WYgkplIR9yqqucXKBr0|OK||||||||||||||
-Tettegouche State Park MN|TRUE|Tettegouche State Park, 5702 MN-61, Silver Bay, MN 55614, USA|47.3393554|-91.1959925|ChIJ7Sg2az2sqFIR-ljZsWlFKXI|OK||||||||||||||
+Tettegouche State Park MN|TRUE|Tettegouche State Park, 5702 MN-61, Silver Bay, MN 55614, USA|47.3393554|-91.1959925|ChIJ7Sg2az2sqFIR-ljZsWlFKXI|OK|spk00269|2019-09-02|2.0|23||4.5|4.5|Lake Superior shoreline|1|1|1|0|1|1
 Upper Sioux Agency State Park MN|TRUE|Upper Sioux Agency State Park, 5908 MN-67, Granite Falls, MN 56241, USA|44.7372226|-95.4601579|ChIJMSHY1cCZiocRMtvAp3CuI6k|OK||||||||||||||
 Whitewater State Park MN|TRUE|Whitewater State Park, 19041 MN-74, Altura, MN 55910, USA|44.062655|-92.044542|ChIJybS2MmyW-YcRkM7vBrARIXM|OK|spk00280||2.2|10||4|5||0|1|1|1|1|0
 Wild River State Park MN|TRUE|Wild River State Park, 39797 Park Trail, Center City, MN 55012, USA|45.5230749|-92.7490594|ChIJs6WI9x5gslIRmTiTxsjKMS8|OK||||||||||||||
