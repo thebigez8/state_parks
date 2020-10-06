@@ -9,7 +9,7 @@ Blue Mounds State Park MN|TRUE|Blue Mounds State Park, 1410 161st St, Luverne, M
 Buffalo River State Park MN|TRUE|Buffalo River State Park, 565 155th St S, Glyndon, MN 56547, USA|46.872484|-96.4745248|ChIJa5-z1XbpyFIRnUPUtes_qdM|OK|spk00124|2018-09-21|2.5|12||2.5|2.5||0|1|0|1|1|0
 Camden State Park MN|TRUE|Camden State Park, 1897 Camden Park Rd, Lynd, MN 56157, United States|44.3556871|-95.9177561|ChIJ0SQtX09OiocRwH2HXJWcQpU|OK||||||||||||||
 Carley State Park MN|TRUE|Carley State Park, 50366 County Rd 4, Plainview, MN 55964, USA|44.1102521|-92.1702724|ChIJIY5Yg_fA-YcR4xNRHO6fs2A|OK|spk00130|2018-09-09|1.8|5||4|4.5|Like Whitewater|0|1|1|0|1|0
-Cascade River State Park MN|TRUE|Cascade River State Park, West, 3481 Minnesota 61, Lutsen, MN 55612, United States|47.7114679|-90.5068767|ChIJYea2eZDIp1IRaVzYY9iYrl0|OK||||||||||||||
+Cascade River State Park MN|TRUE|Cascade River State Park, West, 3481 Minnesota 61, Lutsen, MN 55612, United States|47.7114679|-90.5068767|ChIJYea2eZDIp1IRaVzYY9iYrl0|OK|spk00133|2020-09-08|3.5|18||4.5|4.5|Lookout, overgrown, cool flora|1|1|1|0|1|1
 Charles A. Lindbergh State Park MN|TRUE|Charles A. Lindbergh State Park, 1615 Lindbergh Dr S, Little Falls, MN 56345, USA|45.9589523|-94.3885339|ChIJqxUingkwtFIRQPVx4xGS_-Y|OK||||||||||||||
 Crow Wing State Park MN|TRUE|Crow Wing State Park, 3124 State Park Rd, Brainerd, MN 56401, USA|46.2640044|-94.3189472|ChIJi86n00KXtlIRN2lglc9B4hQ|OK||||||||||||||
 Cuyuna Country State Recreation Area MN|FALSE|Cuyuna Country State Recreation Area, 307 3rd St, Ironton, MN 56455, USA|46.4815643|-93.9796132|ChIJd-gLL1HKtlIR9b46sVzlZKg|OK||||||||||||||
@@ -66,7 +66,7 @@ Schoolcraft State Park MN|TRUE|Schoolcraft State Park, 9042 Schoolcraft Ln NE, D
 Sibley State Park MN|TRUE|Sibley State Park, 800 Sibley Park Rd NE, New London, MN 56273, USA|45.3244519|-95.0488697|ChIJf8Bp-aBktVIRTQ0LQoa8Yq0|OK||||||||||||||
 Split Rock Creek State Park MN|TRUE|Split Rock Creek State Park, 336 50th Ave, Jasper, MN 56144, USA|43.895911|-96.3668441|ChIJm0lsvvTgi4cRxFRm4iA4S4A|OK||||||||||||||
 Split Rock Lighthouse State Park MN|TRUE|Split Rock Lighthouse State Park, 3755 Split Rock Lighthouse Road, Two Harbors, MN 55616, USA|47.1963898|-91.3912157|ChIJvcX13VhJr1IRdrXFakaY1aI|OK||||||||||||||
-Temperance River State Park MN|TRUE|Temperance River State Park, 7620 West Highway 61, Schroeder, MN 55613, United States|47.555824|-90.871819|ChIJtw75WYgkplIR9yqqucXKBr0|OK||||||||||||||
+Temperance River State Park MN|TRUE|Temperance River State Park, 7620 West Highway 61, Schroeder, MN 55613, United States|47.555824|-90.871819|ChIJtw75WYgkplIR9yqqucXKBr0|OK|spk00268|2020-09-08|1.9|22||5|5|Gorge|1|1|1|0|1|1
 Tettegouche State Park MN|TRUE|Tettegouche State Park, 5702 MN-61, Silver Bay, MN 55614, USA|47.3393554|-91.1959925|ChIJ7Sg2az2sqFIR-ljZsWlFKXI|OK|spk00269|2019-09-02|2.0|23||4.5|4.5|Lake Superior shoreline|1|1|1|0|1|1
 Upper Sioux Agency State Park MN|TRUE|Upper Sioux Agency State Park, 5908 MN-67, Granite Falls, MN 56241, USA|44.7372226|-95.4601579|ChIJMSHY1cCZiocRMtvAp3CuI6k|OK||||||||||||||
 Whitewater State Park MN|TRUE|Whitewater State Park, 19041 MN-74, Altura, MN 55910, USA|44.062655|-92.044542|ChIJybS2MmyW-YcRkM7vBrARIXM|OK|spk00280||2.2|10||4|5||0|1|1|1|1|0
